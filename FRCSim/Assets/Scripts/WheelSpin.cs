@@ -5,9 +5,10 @@ using UnityEngine;
 /**
  * Spins the wheels
  **/
- 
-public class WheelSpin : MonoBehaviour {
-    public List <AxleInfo> axleInfos;
+
+public class WheelSpin : MonoBehaviour
+{
+    public List<AxleInfo> axleInfos;
     public float maxMotorTorque;
 
     float v;
@@ -20,19 +21,19 @@ public class WheelSpin : MonoBehaviour {
 
         foreach (AxleInfo axleInfo in axleInfos)
         {
-            axleInfo.left.transform.Rotate(-axleInfo.left.motorTorque*Time.deltaTime, 0, 0);
-            axleInfo.right.transform.Rotate(axleInfo.left.motorTorque*Time.deltaTime, 0, 0);
+            axleInfo.left.transform.Rotate(-axleInfo.left.motorTorque, 0, 0);
+            axleInfo.right.transform.Rotate(axleInfo.left.motorTorque, 0, 0);
 
             if (v != 0)
             {
+
                 float motor = maxMotorTorque * v;
                 axleInfo.left.motorTorque = motor;
                 axleInfo.right.motorTorque = motor;
             }
-
             else if (h != 0)
             {
-                float motor = maxMotorTorque * h;
+                float motor = maxMotorTorque * h;// * 2;
                 axleInfo.left.motorTorque = motor;
                 axleInfo.right.motorTorque = -motor;
             }

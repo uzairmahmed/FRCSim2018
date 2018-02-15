@@ -21,7 +21,7 @@ public class ElevatorLift : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        vv = Input.GetAxisRaw("Vertical2");
+        vv = Input.GetAxisRaw("Lift");
 
         GetHeight();
 

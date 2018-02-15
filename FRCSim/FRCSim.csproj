@@ -212,20 +212,20 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>C:/Users/Shaurya/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>C:/Users/uzair/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Purchasing">
-      <HintPath>C:/Users/Shaurya/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/uzair/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\cameraSwitch.cs" />
-    <Compile Include="Assets\CloneCube.cs" />
-    <Compile Include="Assets\ScaleScore.cs" />
     <Compile Include="Assets\Scripts\AxleInfo.cs" />
+    <Compile Include="Assets\Scripts\cameraSwitch.cs" />
+    <Compile Include="Assets\Scripts\CloneCube.cs" />
     <Compile Include="Assets\Scripts\ElevatorLift.cs" />
     <Compile Include="Assets\Scripts\Grab.cs" />
     <Compile Include="Assets\Scripts\Grabbed.cs" />
+    <Compile Include="Assets\Scripts\ScaleScore.cs" />
     <Compile Include="Assets\Scripts\WheelSpin.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -6,7 +6,7 @@ public class Grab : MonoBehaviour {
     bool holding = false;
     public Grabbed grabbedScript;
     //public Transform parent;
-
+    float e;
 
 
     // Use this for initialization
@@ -28,10 +28,12 @@ public class Grab : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-      //  transform.position = parent.position + parent.transform.forward*(float)2.2;
-       // transform.rotation = parent.rotation;
+        //  transform.position = parent.position + parent.transform.forward*(float)2.2;
+        // transform.rotation = parent.rotation;
 
-        if (Input.GetKey("e") && holding)
+        e = Input.GetAxisRaw("Grab");
+
+        if ((e>0) && (holding))
         {
             grabbedScript.SetGrabbed(false);
             grabbedScript.Shoot();
