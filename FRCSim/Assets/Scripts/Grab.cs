@@ -17,7 +17,7 @@ public class Grab : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("hit");
-        if (!holding && collision.gameObject.tag == "cube")
+        if (!holding && collision.gameObject.tag == "cube" && e<0)
         {
             grabbedScript = collision.gameObject.GetComponent<Grabbed>();
             grabbedScript.SetGrabbed(true);
