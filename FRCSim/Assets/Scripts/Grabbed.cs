@@ -23,7 +23,7 @@ public class Grabbed : MonoBehaviour {
     {
         rb.useGravity = true;
         transform.position = bot.position + (float)0.8*bot.transform.right;
-        rb.AddRelativeForce(10, 0, 0);
+        rb.AddRelativeForce(5, 0, 0);
 
     }
 
