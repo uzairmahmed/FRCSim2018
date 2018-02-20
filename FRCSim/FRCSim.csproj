@@ -225,6 +225,7 @@
     <Compile Include="Assets\Scripts\ElevatorLift.cs" />
     <Compile Include="Assets\Scripts\Grab.cs" />
     <Compile Include="Assets\Scripts\Grabbed.cs" />
+    <Compile Include="Assets\Scripts\HookLift.cs" />
     <Compile Include="Assets\Scripts\ScaleScore.cs" />
     <Compile Include="Assets\Scripts\WheelSpin.cs" />
   </ItemGroup>
