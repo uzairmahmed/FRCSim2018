@@ -219,15 +219,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\AxleInfo.cs" />
     <Compile Include="Assets\Scripts\cameraSwitch.cs" />
-    <Compile Include="Assets\Scripts\CloneCube.cs" />
-    <Compile Include="Assets\Scripts\ElevatorLift.cs" />
-    <Compile Include="Assets\Scripts\Grab.cs" />
     <Compile Include="Assets\Scripts\Grabbed.cs" />
-    <Compile Include="Assets\Scripts\HookLift.cs" />
+    <Compile Include="Assets\Scripts\Manager.cs" />
+    <Compile Include="Assets\Scripts\RobotController.cs" />
     <Compile Include="Assets\Scripts\ScaleScore.cs" />
-    <Compile Include="Assets\Scripts\WheelSpin.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
