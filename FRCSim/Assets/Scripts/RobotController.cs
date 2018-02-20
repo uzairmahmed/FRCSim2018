@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RobotController : MonoBehaviour {
+    public int team;
+
     public float intakeHeight;
     public float hookHeight;
 
@@ -145,6 +147,7 @@ public class RobotController : MonoBehaviour {
         if (!holdingCube && collision.gameObject.tag == "cube" && intakeAxis < 0)
         {
             grabbedScript = collision.gameObject.GetComponent<Grabbed>();
+            grabbedScript.intake = intake;
             grabbedScript.SetGrabbed(true);
             holdingCube = true;
         }

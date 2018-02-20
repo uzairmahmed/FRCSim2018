@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Grabbed : MonoBehaviour {
     public bool grabbed = false;
-    public Transform intake;
+    public GameObject intake;
     public Rigidbody rb;
 
 	// Use this for initialization

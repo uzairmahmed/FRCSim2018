@@ -224,6 +224,8 @@
     <Compile Include="Assets\Scripts\Manager.cs" />
     <Compile Include="Assets\Scripts\RobotController.cs" />
     <Compile Include="Assets\Scripts\ScaleScore.cs" />
+    <Compile Include="Assets\Scripts\SpawnCube.cs" />
+    <Compile Include="Assets\Scripts\StartScreen.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
