@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class RobotController : MonoBehaviour {
+public class RobotController : NetworkBehaviour {
     public int team;
 
     public float intakeHeight;
@@ -40,6 +41,11 @@ public class RobotController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+        if (!isLocalPlayer)
+        {
+            return;
+        }
+
         liftAxis = Input.GetAxisRaw("Lift");
         intakeLiftAxis = Input.GetAxisRaw("Lift");
         forwardAxis = Input.GetAxisRaw("Vertical");
