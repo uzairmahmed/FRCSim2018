@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class SpawnCube : MonoBehaviour {
 
@@ -22,8 +23,14 @@ public class SpawnCube : MonoBehaviour {
         if (collision.gameObject.tag == "RobotPart")
         {
             player = collision.gameObject;
-            Instantiate(powerCube, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.identity);
+            SpawnACube();
         }
+    }
+
+    void SpawnACube()
+    {
+        var cube = (GameObject)Instantiate(powerCube, new Vector3(transform.position.x, 2, transform.position.z), Quaternion.identity);
+        NetworkServer.Spawn(cube);
     }
     
 }

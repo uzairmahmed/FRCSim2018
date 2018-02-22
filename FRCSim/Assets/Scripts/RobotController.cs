@@ -4,7 +4,13 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 public class RobotController : NetworkBehaviour {
-    public int team;
+    //public GameObject team;
+    //public string teamName;
+    //public Camera teamCamera;
+
+    public Camera intakeCamera;
+    public Camera liftCamera;
+    public float activeCamera;
 
     public float intakeHeight;
     public float hookHeight;
@@ -14,6 +20,7 @@ public class RobotController : NetworkBehaviour {
     float liftAxis;
     float intakeLiftAxis;
     float intakeAxis;
+    float cameraAxis;
 
     public float minIntakeHeight = 0.2f;
     public float medIntakeHeight = 1f;
@@ -36,7 +43,7 @@ public class RobotController : NetworkBehaviour {
     
     // Use this for initialization
     void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -45,12 +52,12 @@ public class RobotController : NetworkBehaviour {
         {
             return;
         }
-
         liftAxis = Input.GetAxisRaw("Lift");
         intakeLiftAxis = Input.GetAxisRaw("Lift");
         forwardAxis = Input.GetAxisRaw("Vertical");
         sidewaysAxis = Input.GetAxisRaw("Horizontal");
         intakeAxis = Input.GetAxisRaw("Grab");
+        cameraAxis = Input.GetAxisRaw("Camera");
 
         GetHookHeight();
         GetIntakeHeight();
@@ -58,8 +65,12 @@ public class RobotController : NetworkBehaviour {
         intakeLimiter();
         intakeGrab();
         hookLimiter();
-
         wheelSpin();
+    }
+
+    private void LateUpdate()
+    {
+        cameraControl();
     }
 
     void intakeLimiter()
@@ -129,6 +140,30 @@ public class RobotController : NetworkBehaviour {
                 axleInfo.left.motorTorque = 0;
                 axleInfo.right.motorTorque = 0;
             }
+        }
+    }
+
+    void cameraControl()
+    {
+        if (cameraAxis > 0)
+        {
+            activeCamera++;
+        }
+
+        if (activeCamera > 1)
+        {
+            activeCamera = 0;
+        }
+
+        if (activeCamera == 0)
+        {
+            intakeCamera.enabled = false;
+            liftCamera.enabled = true;
+        }
+        if (activeCamera == 1)
+        {
+            intakeCamera.enabled = true;
+            liftCamera.enabled = false;
         }
     }
 
