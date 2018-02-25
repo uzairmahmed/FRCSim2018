@@ -1,6 +1,6 @@
 # FRC Unity Simulator 2018
-*Made with 🤖❤️ by Uzair Ahmed and Shaurya Manocha*
-**This is simply made to test strategies and timing. While basic physics stuff work, don't expect it to be accurate. IF YOU WANT ACCURATE, USE THE REAL ROBOT
+*Made with 🤖❤️ by Uzair Ahmed and Shaurya Manocha*\
+**This is simply made to test strategies and timing. While basic physics stuff work, don't expect it to be accurate. IF YOU WANT ACCURATE, USE THE REAL ROBOT**
 
 ## Bugs
 - LAN games work 25% of the time
