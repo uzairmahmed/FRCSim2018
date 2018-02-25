@@ -1,6 +1,7 @@
 # FRC Unity Simulator 2018
+Github Link: [https://github.com/uzairmahmed/FRCSim2018](https://github.com/uzairmahmed/FRCSim2018)\
 *Made with 🤖❤️ by Uzair Ahmed and Shaurya Manocha*\
-**This is simply made to test strategies and timing. While basic physics stuff work, don't expect it to be accurate. IF YOU WANT ACCURATE, USE THE REAL ROBOT**
+**This is simply made ~for fun~ to test strategies and timing. While basic physics stuff work, don't expect it to be accurate. IF YOU WANT ACCURATE, USE THE REAL ROBOT**
 
 ## Bugs
 - LAN games work 25% of the time
