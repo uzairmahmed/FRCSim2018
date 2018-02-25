@@ -29,14 +29,17 @@
 **Spin:** AntiClockwise/Clockwise\
 **Cube:** Intake/Output\
 **Elevator:** Up/Down\
+**Camera:** 3rdPersonView/IntakeView
 
 ### Respective Keyboard Controls
 - `W` and `A`: Move
 - `S` and `D`: Spin
 - `Q` and `E`: Cube
 - `Up` and `Down`: Elevator
+- `C`: Camera
 
 ### Respective Xbox Controls
 - `Left Joystick`: Move/Spin
 - `B` and `A`: Cube
 - `RB` and `LB`: Elevator
+- `Right Joysitck Button`: Camera
